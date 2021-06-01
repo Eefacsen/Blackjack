@@ -110,6 +110,7 @@ def place_bets(players):
     # EACH PLAYER TO PLACE THEIR BETS
     for player in players:
         if player.name != 'Dealer':
+            print(f'Current chip stack - {player.chips}')
             # check if the player has enough chips to bet with
             if player.chips < 2:
                 while True:
@@ -241,7 +242,8 @@ def new_game():
                             print(card, end=" ")
                             time.sleep(0.5)
                 # after each player is delt pause for drama
-                time.sleep(1)
+                # removed pause for better flow
+                # time.sleep(1)
                 
                 x += 1
         time.sleep(1)
@@ -254,16 +256,11 @@ def new_game():
                 while myTurn:        
                     clear()
                     print(f"{player.name}'s turn\n")
-                    time.sleep(0.5)
                     print(f'Your bet     : {player.bet}')
-                    time.sleep(0.5)
                     player.score = get_score(player.hand)
                     print(f'Your score   : {player.score}\n\n')
-                    time.sleep(0.5)
                     print(f'Dealers hand : {(players[-1].hand[0])} [%%%]')
-                    time.sleep(0.5)
                     print(f'Your hand    : ',end="")
-                    time.sleep(0.5)
                     for card in player.hand:
                         print(f'{card}',end=" ")
                         time.sleep(0.5)
