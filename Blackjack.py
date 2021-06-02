@@ -1,3 +1,12 @@
+"""
+BLACK 21 JACK
+---------------------
+Future dvelopment will be to add functionality to the table
+    - slip / double / insurance
+    - add correct push logic
+    - add a GUI
+"""
+
 import random
 import os
 import time
