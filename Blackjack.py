@@ -5,6 +5,7 @@ Future dvelopment will be to add functionality to the table
     - slip / double / insurance
     - add correct push logic
     - add a GUI
+    - add a hand counter
 """
 
 import random
